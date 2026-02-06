@@ -1,0 +1,1115 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ==================================== */
+/* 🌐 HEADER E NAVEGAÇÃO GERAL */
+/* ==================================== */
+header {
+  background: #2ecc71;
+  padding: 15px;
+  color: white;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Limita a largura da navegação */
+  margin: 0 auto;
+}
+
+header nav .logo {
+  font-size: 1.8em;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #2c3e50; /* Logo em cor escura para destaque no cyan */
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+header nav ul li a:hover {
+  color: #2c3e50; /* Hover em branco */
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #27ae60, #2ecc71);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ANIMAÇÃO NO BOTÃO PRINCIPAL */
+.btn {
+  background: #fff;
+  color: #27ae60;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+
+  display: inline-block; /* Necessário para a animação */
+  animation: pulse 2s infinite;
+}
+
+.btn:hover {
+  background: #eee;
+  animation: none; /* Para a animação ao passar o mouse */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.sobre {
+  padding: 40px;
+  text-align: center;
+}
+
+.sobre ul {
+  list-style: none;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.sobre li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+footer {
+  background: #2ecc71;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  margin-top: 185px;
+}
+
+/* ==================================== */
+/* 📝 FORMULÁRIOS E DASHBOARD */
+/* ==================================== */
+/* Bloco CORRIGIDO */
+.form-container {
+  max-width: 400px;
+  margin: 50px auto; /* Deixe como estava, com 50px */
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #27ae60;
+}
+
+.form-container input,
+.form-container select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-container button:hover {
+  background: #2ecc71;
+}
+
+/* ... logo após .form-container button:hover ... */
+
+/* ESTILO PARA O LINK "Cadastre-se" / "Faça login" DENTRO DOS FORMS 
+*/
+.form-link {
+  /* 1. Define a cor verde (a mesma do seu botão) */
+  color: #27ae60; 
+  
+  /* 2. Tira o sublinhado padrão */
+  text-decoration: none;
+  font-weight: bold;
+  
+  /* 3. Prepara para a animação */
+  display: inline-block; /* Necessário para o 'transform' funcionar */
+  transition: transform 0.2s ease-in-out;
+}
+
+/* 4. Efeito de expansão ao passar o mouse */
+.form-link:hover {
+  transform: scale(1.1); /* Aumenta o link em 10% */
+}
+
+/* FIX: GARANTINDO O GRID DO DASHBOARD */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.user-info,
+.progress {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.user-info h2 {
+  margin-bottom: 10px;
+  color: #27ae60;
+}
+
+/* NOVO: CORREÇÃO ESPECÍFICA PARA O GRÁFICO (Chart.js) */
+.progress canvas {
+  width: 100% !important; /* Força o canvas a usar a largura total do container */
+  max-height: 400px; /* Limita a altura para evitar gráficos muito longos */
+}
+
+/* ==================================== */
+/* 💬 CHATBOT GERAL (Widget flutuante) */
+/* ==================================== */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s, border-radius 0.3s, height 0.3s; /* Adicionado height */
+  width: 300px;
+}
+
+/* O .chat-header é usado pelo widget */
+.chat-header {
+  background: #27ae60;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* O .chat-body é usado pelo widget */
+.chat-body {
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+/* O .chat-footer é usado pelo widget */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-footer input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 0 0 0 10px;
+}
+
+.chat-footer button {
+  padding: 10px;
+  border: none;
+  background: #27ae60;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 0 10px 0;
+}
+
+.chat-hidden {
+  display: none !important;
+}
+
+.chatbot.minimized {
+  width: 100px !important;
+  height: 40px !important;
+  border-radius: 10px;
+}
+.chatbot.minimized .chat-header {
+  border-radius: 10px;
+}
+
+/* ==================================== */
+/* 🏋️‍♀️ TREINOS (Layout de Abas e Cards) */
+/* ==================================== */
+.treinos-page {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Menu de Categorias (TABS) */
+.categorias-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  padding: 10px 0;
+  border-bottom: 2px solid #ddd;
+}
+
+.btn-categoria {
+  background: #fff;
+  color: #27ae60;
+  border: 2px solid #27ae60;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.btn-categoria.active {
+  background: #27ae60;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Configuração do Grid para a exposição dos Cards */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s;
+  text-align: center;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+}
+/* Efeito de Hover nos Cards de Treino */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* CORREÇÃO DEFINITIVA PARA AS IMAGENS DA PÁGINA DE TREINOS (treinos.html) */
+.card img {
+  /* Força a imagem a preencher a área do container */
+  width: 100% !important;
+  height: 200px !important;
+
+  /* ESSENCIAL: Garante que a proporção seja mantida, SEM CORTAR */
+  object-fit: contain !important;
+
+  /* Preenche o espaço vazio deixado pelo 'contain' com a cor branca do card */
+  background-color: white !important;
+
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  align-self: center;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* ==================================== */
+/* 🏋️‍♀️ DETALHE DO TREINO (treino-detalhe.html) - CORREÇÃO ESPECÍFICA */
+/* ==================================== */
+.treino-detalhe-page {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Container de cada Exercício (Assumindo que você usa esta classe) */
+.exercicio-card {
+  display: flex;
+  background: #fcfcfc;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+.gif-col {
+  flex: 0 0 150px; /* Largura fixa MÍNIMA para o GIF em desktop */
+  text-align: center;
+}
+
+/* REGRA ESPECÍFICA PARA IMAGEM NA PÁGINA DE DETALHES */
+.exercicio-card img,
+.gif-col img {
+  /* Define tamanho para as imagens (GIFs) de treino individuais */
+  width: 150px !important;
+  height: 120px !important;
+  /* Garante que o GIF ou a imagem apareça COMPLETO no espaço reservado. */
+  object-fit: contain !important;
+
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: white; /* Garante que o fundo não seja cinza */
+}
+/* FIM DA REGRA ESPECÍFICA PARA DETALHES */
+
+.nome-exercicio {
+  font-weight: bold;
+  color: #2c3e50;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* ==================================== */
+/* ⚡ BOTÕES DE AÇÃO SECUNDÁRIA (Ex: Voltar) - NOVOS ESTILOS */
+/* ==================================== */
+.btn-secondary {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 1rem;
+
+  /* Estilo Invertido/Secundário */
+  background: #fff; /* Fundo branco ou claro */
+  color: #27ae60; /* Cor de texto primária */
+  border: 2px solid #27ae60; /* Borda da cor primária */
+}
+
+.btn-secondary:hover {
+  background: #27ae60; /* Fundo verde ao passar o mouse */
+  color: white; /* Texto branco ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+}
+
+/* Estilo discreto para links de 'Voltar' dentro do texto */
+.link-back {
+  color: #555;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+.link-back:hover {
+  color: #27ae60;
+  text-decoration: underline;
+}
+
+/* ==================================== */
+/* 🏠 PÁGINA INICIAL - SEÇÕES NOVAS */
+/* ==================================== */
+.destaques,
+.tecnologia,
+.depoimentos,
+.chamada-final {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 1200px; /* Limita a largura do conteúdo */
+  margin: 0 auto;
+}
+.destaques {
+  background: #fcfcfc;
+}
+.depoimentos {
+  background: #e9f5ee;
+}
+.tecnologia {
+  background: #f4f4f9;
+}
+
+.destaques h3,
+.tecnologia h3,
+.depoimentos h3 {
+  color: #27ae60;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+/* Containers de Cards */
+.destaques-cards-container,
+.tecnologia-container,
+.depoimentos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.card-destaque,
+.tech-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  flex: 1 1 300px;
+  max-width: 350px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s;
+}
+.card-destaque:hover,
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.depoimento-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  text-align: left;
+  border-left: 5px solid #27ae60;
+  flex: 1 1 300px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s;
+}
+.depoimento-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  cursor: default; /* Depoimentos não são tão clicáveis */
+}
+
+.depoimento-card span {
+  display: block;
+  text-align: right;
+  font-weight: bold;
+  color: #27ae60;
+  margin-top: 10px;
+}
+
+.btn-small {
+  display: inline-block;
+  background: #27ae60;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+.btn-small:hover {
+  background: #2ecc71;
+}
+
+/* EFEITO DE CARREGAMENTO SUAVE */
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================================== */
+/* 📱 MEDIA QUERIES (Responsividade) */
+/* ==================================== */
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 100%;
+    min-height: 350px;
+  }
+
+  .categorias-menu {
+    gap: 8px;
+  }
+
+  .btn-categoria {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .hero,
+  .sobre,
+  .treinos-page,
+  .destaques,
+  .depoimentos,
+  .tecnologia {
+    padding: 30px 15px;
+  }
+
+  /* Responsividade para Detalhes */
+  .exercicio-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gif-col {
+    flex: 0 0 auto;
+  }
+}
+
+/* ==================================== */
+/* 🏋️ ESTILOS DA PÁGINA DE TREINOS (treinos.html) */
+/* ==================================== */
+
+.treinos-page {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.objetivo-plano {
+  background-color: #f0fdf4; /* Cor de fundo suave do verde */
+  color: #16a085;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border-left: 5px solid #2ecc71;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Menu de Categorias/Abas (Tabs) */
+.categorias-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd; /* Linha sutil de separação */
+}
+
+.btn-categoria {
+  background: #f4f4f9;
+  color: #555;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px 5px 0 0; /* Bordas arredondadas no topo */
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+  margin-bottom: -2px; /* Faz com que a aba ativa cubra a borda inferior */
+}
+
+.btn-categoria:hover {
+  background: #e0e0e0;
+}
+
+.btn-categoria.active {
+  background: #fff; /* Fundo branco para parecer que a seção pertence à aba */
+  color: #27ae60;
+  border-bottom: 3px solid #2ecc71; /* Linha verde forte para indicar ativo */
+}
+
+/* Estilo dos Cards de Treino (dentro dos Planos) */
+.card-treino {
+  display: block;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none; /* Tira o sublinhado do link */
+  color: inherit;
+}
+
+.card-treino:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-treino h4 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.card-treino p {
+  font-size: 0.95rem;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+/* ==================================== */
+/* 🏋️ ESTILOS DA PÁGINA DE DETALHE (treino-detalhe.html) */
+/* ==================================== */
+
+.treino-detalhe-page {
+  /* Mantenha o estilo do .container */
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.objetivo-treino {
+  font-size: 1.1rem;
+  color: #16a085;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Estilo para cada exercício individual */
+.lista-exercicios-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.exercicio-card {
+  display: flex;
+  flex-direction: column; /* Padrão mobile */
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.exercicio-card strong {
+  color: #2c3e50;
+}
+
+.nome-exercicio {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+.series-info {
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.instrucao {
+  margin-top: 10px;
+  font-style: italic;
+  color: #34495e;
+  border-left: 3px solid #f39c12; /* Linha de dica amarela */
+  padding-left: 10px;
+}
+
+/* Botão de Conclusão na página de detalhe */
+#concluirTreinoBtn {
+  background-color: #2ecc71;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+#concluirTreinoBtn:hover:not(:disabled) {
+  background-color: #27ae60;
+}
+
+#concluirTreinoBtn:disabled {
+  background-color: #bdc3c7; /* Cinza para indicar desativado */
+  cursor: not-allowed;
+}
+
+/* Responsividade para a página de detalhe */
+@media (min-width: 768px) {
+  .exercicio-card {
+    flex-direction: row; /* Layout lado a lado em telas maiores */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .exercicio-card .info-col {
+    flex: 2;
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+  }
+  .exercicio-card .detalhes-col {
+    flex: 3;
+    padding-left: 20px;
+  }
+  .nome-exercicio {
+    margin-bottom: 0;
+  }
+  .instrucao {
+    margin-top: 0;
+  }
+}
+
+/* Estilos Essenciais para o Modal (Se ainda não existirem) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+}
+
+/* 🆕 NOVO: Classe para modais menores e centralizados, como nas imagens */
+.modal-box.small-modal {
+  max-width: 350px; /* Mais estreito para o pop-up de confirmação/sucesso */
+}
+
+.modal-box p {
+  margin-bottom: 20px;
+  font-size: 1.1em;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espaço entre os botões */
+}
+
+/* Garantir o estilo dos botões (Exemplo) */
+.btn-voltar {
+  background-color: #27ae60;
+  color: white;
+  padding: 2px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-voltar:hover {
+  background-color: #2c3e50;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ====================================================== */
+/* 💬 PÁGINA DE CHAT (chatbot.html) - NOVOS ESTILOS */
+/* ====================================================== */
+
+/* O .chat-page já existia no CSS antigo, mas vamos garantir */
+.chat-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* Garante que a página ocupe a altura, menos o header (se houver) */
+  min-height: calc(100vh - 80px);
+}
+
+/* O .chat-container já existia, vamos ajustar */
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Garante que os cantos arredondados sejam mantidos */
+}
+
+/* O .chat-header já existia, vamos ajustar */
+/* Usamos #27ae60 para combinar com o verde do seu site */
+.chat-container .chat-header {
+  background-color: #27ae60;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px 8px 0 0; /* Ajusta bordas */
+}
+
+/* O .chat-body (ID #chatMessages) é novo e crucial */
+.chat-container .chat-body {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 100%; /* Garante que o flex-grow funcione */
+}
+
+/* As bolhas de mensagem */
+.chat-message {
+  padding: 12px 18px;
+  border-radius: 18px;
+  line-height: 1.4;
+  max-width: 80%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Mensagem da IA (Modelo) */
+.model-message {
+  background-color: #e9ecef;
+  color: #333;
+  border-bottom-left-radius: 4px;
+  align-self: flex-start;
+}
+
+/* Formatação de listas enviadas pela IA */
+.model-message ul {
+  padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.model-message li {
+  margin-bottom: 4px;
+}
+
+/* Mensagem do Usuário */
+.user-message {
+  background-color: #27ae60; /* Cor verde do seu site */
+  color: white;
+  border-bottom-right-radius: 4px;
+  align-self: flex-end;
+}
+
+/* O .chat-footer já existia, vamos ajustar */
+.chat-container .chat-footer {
+  border-top: 1px solid #ccc;
+  padding: 15px 20px;
+  background-color: #fff;
+  display: flex; /* Garante que o form use o flex */
+}
+
+.chat-container .chat-footer #chatForm {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.chat-container .chat-footer #chatInput {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.chat-container .chat-footer button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #27ae60; /* Cor verde */
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.chat-container .chat-footer button:hover {
+  background-color: #229954; /* Cor verde mais escura */
+}
+
+/* ---------------------------------- */
+/* --- CONTROLE DE LOGIN DO HEADER (CORRETO) --- */
+/* ---------------------------------- */
+
+/* 1. Esconde os LIs por padrão */
+.nav-logged-in,
+.nav-logged-out {
+ display: none;
+}
+
+/* 2. Lógica de visibilidade - Visitante */
+body.user-logged-out .nav-logged-out {
+ /* 'inline-block' funciona corretamente com o 'display: flex' do <ul> */
+ display: inline-block; 
+}
+
+/* 3. Lógica de visibilidade - Usuário Logado */
+body.user-logged-in .nav-logged-in {
+ /* 'inline-block' funciona corretamente com o 'display: flex' do <ul> */
+ display: inline-block;
+}
+
+/* ==================================== */
+/* 🔳 ESTILOS DE BOTÃO NA NAVEGAÇÃO (Login/Cadastro) */
+/* ==================================== */
+.btn-nav-highlight a {
+  /* Estilo base para parecer um botão */
+  background-color: var(--primary-color); /* Verde Principal */
+  color: var(--white) !important; /* Texto branco */
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  
+  /* Garante que o texto fique sempre em uma linha */
+  white-space: nowrap; 
+}
+
+.btn-nav-highlight a:hover {
+  background-color: var(--primary-dark); /* Verde mais escuro no hover */
+  transform: translateY(-1px); /* Efeito 3D leve */
+}
+
+/* ==================================== */
+/* 🔳 ESTILOS DE BOTÃO NA NAVEGAÇÃO (Login/Cadastro/Sair) */
+/* ==================================== */
+.btn-nav-highlight a {
+  /* Estilo base para parecer um botão */
+  background-color: var(--primary-dark); /* Verde Principal */
+  color: var(--white) !important; /* Texto branco */
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  
+  /* Garante que o texto fique sempre em uma linha */
+  white-space: nowrap; 
+}
+
+.btn-nav-highlight a:hover {
+  background-color: #1f8b4a; /* Verde mais escuro no hover */
+  transform: translateY(-1px); /* Efeito 3D leve */
+}

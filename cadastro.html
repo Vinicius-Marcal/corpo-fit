@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Corpo+Fit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Corpo+Fit</div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+
+        <li class="nav-logged-in"><a href="treinos.html" class="protected-link">Treinos</a></li>
+        <li class="nav-logged-in"><a href="nutricao.html" class="protected-link">Nutrição</a></li>
+        <li class="nav-logged-in"><a href="dashboard.html" class="protected-link">Dashboard</a></li>
+        <li class="nav-logged-in"><a href="#" id="logoutButton">Sair</a></li>
+
+        <li class="nav-logged-out"><a href="login.html">Login</a></li>
+        <li class="nav-logged-out"><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="form-container fade-in">
+    <h2>Crie sua conta</h2>
+    <form id="cadastroForm">
+      <input type="text" id="nome" placeholder="Nome completo" required />
+      <input type="email" id="email" placeholder="E-mail" required />
+      <input type="password" id="senha" placeholder="Senha" required />
+      <input type="number" id="idade" placeholder="Idade" required />
+      <input type="number" id="peso" placeholder="Peso (kg)" required />
+      <input type="number" id="altura" placeholder="Altura (cm)" required />
+      <select id="objetivo" required>
+        <option value="">Selecione seu objetivo</option>
+        <option value="perda">Perder Peso</option>
+        <option value="ganho">Ganhar Massa</option>
+        <option value="manter">Manter Saúde</option>
+      </select>
+      <button type="submit">Cadastrar</button>
+    </form>
+        <p>Já tem conta? <a href="login.html" class="form-link">Faça login</a></p>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

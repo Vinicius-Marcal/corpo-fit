@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutrição - Corpo+Fit</title>
+    <link rel="stylesheet" href="css/nutrição.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Corpo+Fit</div>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+
+          <li class="nav-logged-in">
+            <a href="treinos.html" class="protected-link">Treinos</a>
+          </li>
+          <li class="nav-logged-in">
+            <a href="nutricao.html" class="protected-link">Nutrição</a>
+          </li>
+          <li class="nav-logged-in">
+            <a href="dashboard.html" class="protected-link">Dashboard</a>
+          </li>
+          <li class="nav-logged-in"><a href="#" id="logoutButton">Sair</a></li>
+
+          <li class="nav-logged-out"><a href="login.html">Login</a></li>
+          <li class="nav-logged-out"><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container nutricao-page fade-in">
+      <h2>🍏 Nutrição: O Combustível do Seu Progresso</h2>
+      <p class="intro-nutricao">
+        Lembre-se: Você constrói o corpo na academia, mas o define na cozinha.
+        Siga estes pilares para maximizar seus resultados!
+      </p>
+
+      <section class="card-section">
+        <h3 class="section-title">1. Proteína: O Alicerce Muscular</h3>
+
+        <div class="nutricao-card">
+          <div class="icon-section">
+            <span class="emoji">🥩</span>
+          </div>
+          <div class="content-section">
+            <h4>Por que é importante?</h4>
+            <p>
+              A proteína é essencial para a reparação e construção de novas
+              fibras musculares. Sem ela, seu esforço na academia será em vão.
+            </p>
+          </div>
+        </div>
+
+        <div class="nutricao-card">
+          <div class="icon-section">
+            <span class="emoji">⏱️</span>
+          </div>
+          <div class="content-section">
+            <h4>Distribuição Inteligente</h4>
+            <p>
+              Tente incluir uma fonte de proteína em *todas* as suas refeições
+              (café, almoço, lanche e jantar). Isso otimiza a síntese proteica
+              ao longo do dia.
+            </p>
+          </div>
+        </div>
+
+        <div class="nutricao-card">
+          <div class="icon-section">
+            <span class="emoji">💡</span>
+          </div>
+          <div class="content-section">
+            <h4>Fontes Chave</h4>
+            <p>
+              Peito de frango, ovos, iogurte grego, peixes, leguminosas e whey
+              protein (se necessário).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card-section">
+        <h3 class="section-title">2. Carboidratos: Energia Sustentável</h3>
+
+        <div class="nutricao-card">
+          <div class="icon-section">
+            <span class="emoji">🍚</span>
+          </div>
+          <div class="content-section">
+            <h4>Carbos Bons vs. Ruins</h4>
+            <p>
+              Priorize carboidratos complexos e fibrosos, que fornecem energia
+              de forma lenta e estável, como batata doce, arroz integral, aveia
+              e vegetais.
+            </p>
+          </div>
+        </div>
+
+        <div class="nutricao-card">
+          <div class="icon-section">
+            <span class="emoji">⛽</span>
+          </div>
+          <div class="content-section">
+            <h4>Timing da Refeição</h4>
+            <p>
+              Consumir carboidratos de fácil digestão (como frutas ou pão
+              integral) cerca de 1 a 2 horas *antes* do treino garante que você
+              terá glicogênio suficiente para o esforço.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card-section">
+        <h3 class="section-title">3. Hidratação e Micronutrientes</h3>
+
+        <div class="nutricao-card">
+          <div class="icon-section">
+            <span class="emoji">💧</span>
+          </div>
+          <div class="content-section">
+            <h4>A Regra da Água</h4>
+            <p>
+              Beba, no mínimo, 35ml de água por kg de peso corporal. A
+              hidratação é crucial para o desempenho, recuperação e queima de
+              gordura.
+            </p>
+          </div>
+        </div>
+
+        <div class="nutricao-card">
+          <div class="icon-section">
+            <span class="emoji">🥦</span>
+          </div>
+          <div class="content-section">
+            <h4>Vegetais Coloridos</h4>
+            <p>
+              Coma um arco-íris de vegetais e frutas! Eles fornecem vitaminas e
+              minerais que regulam seu metabolismo e fortalecem o sistema
+              imunológico.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="chamada-final-nutricao">
+        <p>
+          Precisa de um plano de refeições personalizado? Fale com nosso
+          assistente de IA!
+        </p>
+        <a href="chatbot.html" class="btn btn-secondary"
+          >🤖 Falar com o Assistente de IA</a
+        >
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Corpo+Fit. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- O chatbot flutuante continua aqui, sem mudança de links -->
+    <div class="chatbot minimized" id="chatbot">
+      <div class="chat-header">
+        Assistente Fitness
+        <button id="toggleChatBtn">💬</button>
+      </div>
+      <div class="chat-body chat-hidden" id="chatBody"></div>
+      <div class="chat-footer chat-hidden" id="chatFooter">
+        <input
+          type="text"
+          id="widgetChatInput"
+          placeholder="Pergunte sobre treino ou dieta..."
+        />
+        <button id="widgetSendBtn">Enviar</button>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

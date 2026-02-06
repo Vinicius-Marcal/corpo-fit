@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot - Corpo+Fit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Corpo+Fit</div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+
+        <li class="nav-logged-in"><a href="treinos.html" class="protected-link">Treinos</a></li>
+        <li class="nav-logged-in"><a href="nutricao.html" class="protected-link">Nutrição</a></li>
+        <li class="nav-logged-in"><a href="dashboard.html" class="protected-link">Dashboard</a></li>
+        <li class="nav-logged-in"><a href="#" id="logoutButton">Sair</a></li>
+
+        <li class="nav-logged-out"><a href="login.html">Login</a></li>
+        <li class="nav-logged-out"><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="chat-page">
+    <div class="chat-container">
+      <div class="chat-header">Chatbot Corpo+Fit IA</div>
+
+      <div class="chat-body" id="chatMessages"></div>
+
+      <div class="chat-footer">
+        <form id="chatForm">
+          <input type="text" id="chatInput" placeholder="Pergunte ao seu coach virtual..." required />
+          <button type="submit" id="sendBtn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

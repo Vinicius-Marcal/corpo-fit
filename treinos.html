@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treinos - Corpo+Fit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Corpo+Fit</div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+
+        <li class="nav-logged-in"><a href="treinos.html" class="protected-link">Treinos</a></li>
+        <li class="nav-logged-in"><a href="nutricao.html" class="protected-link">Nutrição</a></li>
+        <li class="nav-logged-in"><a href="dashboard.html" class="protected-link">Dashboard</a></li>
+        <li class="nav-logged-in"><a href="#" id="logoutButton">Sair</a></li>
+
+        <li class="nav-logged-out"><a href="login.html">Login</a></li>
+        <li class="nav-logged-out"><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="treinos-page fade-in">
+    <h2>Seu Plano de Treinamento</h2>
+    <p>
+      Confira abaixo os treinos separados por grupos musculares. Clique no
+      card para ver o detalhe de cada exercício e registrar sua conclusão.
+    </p>
+
+    <nav class="categorias-menu">
+      <button class="btn-categoria active" data-target="peito">
+        🏋️‍♂️ Peito
+      </button>
+      <button class="btn-categoria" data-target="costas">💪 Costas</button>
+      <button class="btn-categoria" data-target="pernas">🦵 Pernas</button>
+      <button class="btn-categoria" data-target="ombros">🔥 Ombros</button>
+      <button class="btn-categoria" data-target="abdomen">🧠 Core</button>
+    </nav>
+
+    <div class="grupos-container">
+      <section class="grupo" id="peito">
+        <p class="objetivo-plano">
+          Treinos focados na força e no volume do peitoral e tríceps.
+        </p>
+        <div class="cards-container">
+          <a href="treino-A1-peito-triceps.html" class="card-treino card">
+            <img src="img/Peito e Triceps.jpg" alt="Treino de Peito" />
+            <h4>Treino A1: Peito & Tríceps</h4>
+            <p>Foco: Força e Hipertrofia. 60 min.</p>
+            <span class="btn-small">Ver Detalhes</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="grupo hidden" id="costas">
+        <p class="objetivo-plano">
+          Treinos focados na largura e espessura das costas e bíceps.
+        </p>
+        <div class="cards-container">
+          <a href="treino-B1-costas-biceps.html" class="card-treino card">
+            <img src="img/Costas e Biceps.webp" alt="Treino de Costas" />
+            <h4>Treino B1: Costas & Bíceps</h4>
+            <p>Foco: Largura e Volume. 60 min.</p>
+            <span class="btn-small">Ver Detalhes</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="grupo hidden" id="pernas">
+        <p class="objetivo-plano">
+          Treinos para desenvolver quadríceps, isquiotibiais e panturrilhas.
+        </p>
+        <div class="cards-container">
+          <a href="treino-C1-pernas-completo.html" class="card-treino card">
+            <img src="img/Pernas e Ombros.jpg" alt="Treino de Pernas" />
+            <h4>Treino C1: Pernas Completo</h4>
+            <p>Foco: Força e Resistência. 75 min.</p>
+            <span class="btn-small">Ver Detalhes</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="grupo hidden" id="ombros">
+        <p class="objetivo-plano">
+          Treinos para dar volume aos ombros e isolar bíceps/tríceps.
+        </p>
+        <div class="cards-container">
+          <a href="treino-D1-ombros-bracos.html" class="card-treino card">
+            <img src="img/Ombro.jpg" alt="Treino de Ombro" />
+            <h4>Treino D1: Ombros & Braços</h4>
+            <p>Foco: Definição e Picos. 60 min.</p>
+            <span class="btn-small">Ver Detalhes</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="grupo hidden" id="abdomen">
+        <p class="objetivo-plano">
+          Treinos rápidos para fortalecer a região central (Core).
+        </p>
+        <div class="cards-container">
+          <div class="card">
+            <img src="img/Abdominal Supra.gif" alt="Abdominal Supra" />
+            <h4>Abdominal Supra</h4>
+            <p>Deite de costas e eleve o tronco até contrair o abdômen.</p>
+          </div>
+          <div class="card">
+            <img src="img/Prancha.jpg" alt="Prancha" />
+            <h4>Prancha</h4>
+            <p>
+              Fique apoiado nos cotovelos e pontas dos pés, mantendo o corpo
+              alinhado.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <footer>
+    <p>&copy; 2025 Corpo+Fit. Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>

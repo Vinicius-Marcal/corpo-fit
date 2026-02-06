@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - FitTrack</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">Corpo+Fit</div>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+
+        <li class="nav-logged-in"><a href="treinos.html" class="protected-link">Treinos</a></li>
+        <li class="nav-logged-in"><a href="nutricao.html" class="protected-link">Nutrição</a></li>
+        <li class="nav-logged-in"><a href="dashboard.html" class="protected-link">Dashboard</a></li>
+        <li class="nav-logged-in"><a href="#" id="logoutButton">Sair</a></li>
+
+        <li class="nav-logged-out"><a href="login.html">Login</a></li>
+        <li class="nav-logged-out"><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container fade-in">
+    <div class="dashboard-wrapper">
+      <!-- ===== SIDEBAR ===== -->
+      <aside class="sidebar card">
+        <h2 id="saudacao">
+          Bem-vindo(a), <span id="userNome">Usuário</span> 👋
+        </h2>
+        <p class="objetivo-dashboard">
+          Seu foco atual é: <strong id="userObjetivo">Ganho de Massa</strong>
+        </p>
+
+        <div class="metricas-principais">
+          <div class="metrica-card">
+            <h4>Peso Atual</h4>
+            <p><span id="userPeso">--</span> kg</p>
+          </div>
+          <div class="metrica-card">
+            <h4>Seu IMC</h4>
+            <p><span id="userImc">--</span></p>
+          </div>
+          <div class="metrica-card">
+            <h4>Próximo Treino</h4>
+            <p id="proximoTreinoNome">Treino A1</p>
+            <p id="proximoTreinoMusculo">Peito e Tríceps</p>
+          </div>
+        </div>
+
+        <a href="chatbot.html" class="btn btn-secondary btn-chat-link">
+          💬 Fale com seu Coach Inteligente
+        </a>
+      </aside>
+
+      <!-- ===== CONTEÚDO PRINCIPAL ===== -->
+      <section class="dashboard-content">
+        <div class="card grafico-card">
+          <h3>📈 Evolução de Peso</h3>
+          <div class="chart-container">
+            <div class="chart-container">
+              <canvas id="pesoChart"></canvas>
+            </div>
+
+            <form id="registroPesoForm"
+              style="margin-top: 20px; display: flex; gap: 10px; align-items: center; justify-content: center; flex-wrap: wrap; padding-bottom: 10px;">
+              <label for="novoPeso" style="white-space: nowrap; font-weight: 500;">Registrar peso atual (kg):
+              </label>
+              <input type="number" id="novoPeso" name="novoPeso" step="0.1" placeholder="Ex: 80.5" required
+                style="width: 100px; padding: 8px; border: 1px solid #ccc; border-radius: 5px;" />
+              <button type="submit" class="btn btn-secondary" style="padding: 8px 12px; margin: 0;">Registrar</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card log-card">
+          <h3>🏋️ Últimos Treinos Concluídos</h3>
+          <table class="tabela-treinos">
+            <thead>
+              <tr>
+                <th>Treino</th>
+                <th>Data</th>
+              </tr>
+            </thead>
+            <tbody id="tabelaTreinosBody">
+              <tr>
+                <td>Treino C1</td>
+                <td>01/11/2025</td>
+              </tr>
+              <tr>
+                <td>Treino B1</td>
+                <td>30/10/2025</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- 🗑️ Botão para limpar histórico -->
+          <button id="limparHistoricoBtn" class="btn btn-secondary" style="margin-top:15px;">
+            🗑️ Remover Histórico de Treinos
+          </button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Corpo+Fit. Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>

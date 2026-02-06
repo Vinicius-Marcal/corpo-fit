@@ -1,0 +1,505 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* CORES PRINCIPAIS (ATUALIZADAS PARA VERDE) */
+:root {
+  --primary-color: #27ae60; /* Verde Principal */
+  --primary-dark: #219150; /* Verde mais escuro para hover/gradiente */
+  --dark-text: #2c3e50;
+  --light-bg: #f4f4f9;
+  --white: #ffffff;
+}
+
+/* ==================================== */
+/* 🌐 HEADER E NAVEGAÇÃO GERAL */
+/* ==================================== */
+header {
+  background: #2ecc71;
+  padding: 15px;
+  color: white;
+}
+
+header nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1200px; /* Limita a largura da navegação */
+ margin: 0 auto;
+}
+
+header nav .logo {
+ font-size: 1.8em;
+ font-weight: 900;
+ letter-spacing: 1px;
+ color: #2c3e50; 
+}
+
+header nav ul {
+ list-style: none;
+ display: flex;
+ gap: 15px;
+}
+
+header nav ul li a {
+ color: white;
+ text-decoration: none;
+ font-weight: bold;
+ transition: color 0.3s;
+}
+header nav ul li a:hover {
+ color: #2c3e50;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #27ae60, #2ecc71);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ANIMAÇÃO NO BOTÃO PRINCIPAL */
+.btn {
+  background: #fff;
+  color: #27ae60;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+.btn:hover {
+  background: #eee;
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.sobre {
+  padding: 40px;
+  text-align: center;
+}
+
+.sobre ul {
+  list-style: none;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.sobre li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+footer {
+  background: #2ecc71;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  margin-top: 60px;
+}
+
+/* ==================================== */
+/* 📄 SEÇÕES SECUNDÁRIAS */
+/* ==================================== */
+.sobre,
+.depoimentos,
+.chamada-final {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.sobre h3,
+.depoimentos h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: var(--primary-dark);
+}
+
+.sobre ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+.sobre ul li {
+  flex: 1 1 300px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.sobre ul li::before {
+  content: "✅";
+  font-size: 1.2em;
+  color: var(--primary-color);
+  line-height: 1.5;
+}
+
+.depoimentos .cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.depoimento-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  max-width: 350px;
+  flex: 1 1 300px;
+  text-align: left;
+  border-left: 5px solid var(--primary-color);
+}
+
+.depoimento-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+  color: #555;
+}
+.depoimento-card span {
+  display: block;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+.chamada-final {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+.chamada-final p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+/* ==================================== */
+/* 🔳 BOTÕES E LINKS */
+/* ==================================== */
+.btn,
+.btn-primary {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover,
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary,
+.btn-voltar {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color);
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+.btn-secondary:hover,
+.btn-voltar:hover {
+  background-color: var(--primary-color);
+  color: white !important;
+}
+
+.btn-small {
+  padding: 5px 10px;
+  font-size: 0.8em;
+}
+
+/* ==================================== */
+/* 💳 CARDS E CONTAINERS GERAIS */
+/* ==================================== */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+/* ==================================== */
+/* 📊 DASHBOARD ESPECÍFICO */
+/* ==================================== */
+.dashboard-wrapper {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.sidebar {
+  background: var(--white);
+  border: 1px solid #eee;
+}
+
+.dashboard-wrapper h2#saudacao {
+  color: var(--primary-color);
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.objetivo-dashboard {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #eee;
+  padding-bottom: 15px;
+}
+
+.metricas-principais {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.metrica-card {
+  background: var(--light-bg);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-top: 5px solid var(--primary-color);
+}
+
+.metrica-card i {
+  font-size: 1.5em;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+}
+.metrica-card h4 {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 5px;
+}
+.metrica-card p {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--dark-text);
+}
+.metrica-card p span {
+  font-size: 1.5em;
+}
+
+.metrica-card.treino-atual {
+  border-top: 5px solid var(--primary-dark);
+}
+
+.btn-chat-link {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.grafico-card {
+  height: fit-content;
+}
+
+.chart-container {
+  width: 100%;
+  max-height: 400px;
+}
+
+.tabela-treinos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  text-align: left;
+}
+.tabela-treinos th,
+.tabela-treinos td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.tabela-treinos th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.tabela-treinos tr:last-child td {
+  border-bottom: none;
+}
+.tabela-treinos tbody tr:nth-child(even) {
+  background-color: var(--light-bg);
+}
+
+/* ==================================== */
+/* 💫 ANIMAÇÕES */
+/* ==================================== */
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CORREÇÃO ESPECÍFICA PARA O GRÁFICO */
+.progress canvas {
+  width: 100% !important;
+  height: 400px;
+}
+
+/* ============================= */
+/* 🔔 Toast (popup de confirmação) */
+/* ============================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+}
+.modal-box {
+  background: #fff;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+.modal-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.modal-box p {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Toast popup */
+.toast-msg {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #333;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+  z-index: 9999;
+  font-weight: 600;
+}
+.toast-msg.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.toast-msg.sucesso {
+  background: #2ecc71;
+}
+
+/* ---------------------------------- */
+/* --- CONTROLE DE LOGIN DO HEADER (CORRETO) --- */
+/* ---------------------------------- */
+
+/* 1. Esconde os LIs por padrão */
+.nav-logged-in,
+.nav-logged-out {
+ display: none;
+}
+
+/* 2. Lógica de visibilidade - Visitante */
+body.user-logged-out .nav-logged-out {
+ /* 'inline-block' funciona corretamente com o 'display: flex' do <ul> */
+ display: inline-block; 
+}
+
+/* 3. Lógica de visibilidade - Usuário Logado */
+body.user-logged-in .nav-logged-in {
+ /* 'inline-block' funciona corretamente com o 'display: flex' do <ul> */
+ display: inline-block;
+}

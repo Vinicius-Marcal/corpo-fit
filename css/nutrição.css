@@ -1,0 +1,437 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container principal para centralizar conteúdo */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Efeito de Fade-In para carregamento suave da página */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================================== */
+/* 🌐 HEADER E NAVEGAÇÃO GERAL */
+/* ==================================== */
+header {
+  background: #2ecc71;
+  padding: 15px;
+  color: white;
+}
+
+header nav {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ max-width: 1200px; /* Limita a largura da navegação */
+ margin: 0 auto;
+}
+
+header nav .logo {
+ font-size: 1.8em;
+ font-weight: 900;
+ letter-spacing: 1px;
+ color: #2c3e50; 
+}
+
+header nav ul {
+ list-style: none;
+ display: flex;
+ gap: 15px;
+}
+
+header nav ul li a {
+ color: white;
+ text-decoration: none;
+ font-weight: bold;
+ transition: color 0.3s;
+}
+header nav ul li a:hover {
+ color: #2c3e50;
+}
+
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #27ae60, #2ecc71);
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ANIMAÇÃO NO BOTÃO PRINCIPAL */
+.btn {
+  background: #fff;
+  color: #27ae60;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+
+  display: inline-block; /* Necessário para a animação */
+  animation: pulse 2s infinite;
+}
+
+.btn:hover {
+  background: #eee;
+  animation: none; /* Para a animação ao passar o mouse */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.sobre {
+  padding: 40px;
+  text-align: center;
+}
+
+.sobre ul {
+  list-style: none;
+  margin-top: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.sobre li {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+footer {
+  background: #2ecc71;
+  text-align: center;
+  padding: 15px;
+  color: white;
+  margin-top: 30px;
+}
+
+/* ==================================== */
+/* 🍏 PÁGINA DE NUTRIÇÃO (nutricao.html) */
+/* ==================================== */
+
+.nutricao-page {
+  padding-bottom: 80px;
+}
+
+.nutricao-page h2 {
+  color: #2ecc71;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: 800;
+  padding-top: 10px;
+}
+
+.intro-nutricao {
+  text-align: center;
+  font-size: 1.2em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  border-bottom: 2px solid #eafaf1;
+  padding-bottom: 20px;
+}
+
+.card-section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  color: #34495e;
+  border-left: 6px solid #2ecc71;
+  padding-left: 15px;
+  margin-bottom: 30px;
+  font-size: 1.9em;
+  font-weight: 700;
+}
+
+/* Estilo para cada card de nutrição */
+.nutricao-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 25px;
+  margin-bottom: 15px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.nutricao-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-section {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.emoji {
+  font-size: 3.5em;
+  line-height: 1;
+}
+
+.content-section h4 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.content-section p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+/* Chamada final para o assistente de IA */
+.chamada-final-nutricao {
+  text-align: center;
+  padding: 40px;
+  background: #eafaf1;
+  border-radius: 15px;
+  margin-top: 60px;
+  border: 2px dashed #2ecc71;
+}
+
+.chamada-final-nutricao p {
+  font-size: 1.4em;
+  color: #34495e;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary {
+  background-color: #2ecc71;
+  color: #2c3e50;
+  box-shadow: 0 4px 10px rgba(46, 204, 113, 0.4);
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #27ae60;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(46, 204, 113, 0.6);
+}
+
+/* ==================================== */
+/* 💬 CHATBOT GERAL (Widget flutuante) */
+/* ==================================== */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s, border-radius 0.3s, height 0.3s; /* Adicionado height */
+  width: 300px;
+}
+
+/* O .chat-header é usado pelo widget */
+.chat-header {
+  background: #27ae60;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-header button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* O .chat-body é usado pelo widget */
+.chat-body {
+  padding: 10px;
+  height: 200px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+/* O .chat-footer é usado pelo widget */
+.chat-footer {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-footer input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  border-radius: 0 0 0 10px;
+}
+
+.chat-footer button {
+  padding: 10px;
+  border: none;
+  background: #27ae60;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0 0 10px 0;
+}
+
+.chat-hidden {
+  display: none !important;
+}
+
+.chatbot.minimized {
+  width: 100px !important;
+  height: 40px !important;
+  border-radius: 10px;
+}
+.chatbot.minimized .chat-header {
+  border-radius: 10px;
+}
+
+/* ==================================== */
+/* 📱 MEDIA QUERIES (Responsividade) */
+/* ==================================== */
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  header nav {
+    flex-direction: column;
+  }
+
+  header nav ul {
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    max-width: 100%;
+    min-height: 350px;
+  }
+
+  .categorias-menu {
+    gap: 8px;
+  }
+
+  .btn-categoria {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .hero,
+  .sobre,
+  .treinos-page,
+  .destaques,
+  .depoimentos,
+  .tecnologia {
+    padding: 30px 15px;
+  }
+
+  /* Responsividade para Detalhes */
+  .exercicio-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gif-col {
+    flex: 0 0 auto;
+  }
+}
+
+/* ---------------------------------- */
+/* --- CONTROLE DE LOGIN DO HEADER (CORRETO) --- */
+/* ---------------------------------- */
+
+/* 1. Esconde os LIs por padrão */
+.nav-logged-in,
+.nav-logged-out {
+ display: none;
+}
+
+/* 2. Lógica de visibilidade - Visitante */
+body.user-logged-out .nav-logged-out {
+ /* 'inline-block' funciona corretamente com o 'display: flex' do <ul> */
+ display: inline-block; 
+}
+
+/* 3. Lógica de visibilidade - Usuário Logado */
+body.user-logged-in .nav-logged-in {
+ /* 'inline-block' funciona corretamente com o 'display: flex' do <ul> */
+ display: inline-block;
+}
