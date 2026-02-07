@@ -5,7 +5,7 @@ O **Corpo+Fit** é uma aplicação web voltada para **treinos, saúde e bem-esta
 ## Funcionalidades
 
 - Cadastro e login de usuários
-- Visualização de treinos por categoria (força, cardio, flexibilidade)
+- Visualização de treinos
 - Dashboard com:
   - Peso atual
   - Cálculo de IMC
