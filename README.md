@@ -1,27 +1,27 @@
-# 💪 Corpo+Fit
+# Corpo+Fit
 
 O **Corpo+Fit** é uma aplicação web voltada para **treinos, saúde e bem-estar**, permitindo que o usuário acompanhe sua evolução física, registre treinos e receba orientações básicas por meio de um assistente virtual.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
-- ✅ Cadastro e login de usuários
-- 🏋️ Visualização de treinos por categoria (força, cardio, flexibilidade)
-- 📊 Dashboard com:
+- Cadastro e login de usuários
+- Visualização de treinos por categoria (força, cardio, flexibilidade)
+- Dashboard com:
   - Peso atual
   - Cálculo de IMC
   - Gráfico de evolução de peso
-- 📝 Registro de treinos concluídos
-- 🤖 Chatbot fitness com IA (Google Gemini)
-- 💾 Armazenamento local usando `localStorage`
+- Registro de treinos concluídos
+- Chatbot fitness com IA (Google Gemini)
+- Armazenamento local usando `localStorage`
 
-## 🧠 Assistente Virtual (IA)
+## Assistente Virtual (IA)
 
 O projeto utiliza a **API Gemini (Google Generative Language)** para fornecer respostas sobre:
 - Treinos
 - Motivação
 - Hábitos saudáveis
 
-⚠️ **Importante:**  
+**Importante:**  
 A chave da API **não está incluída no repositório** por motivos de segurança.  
 Para utilizar o chatbot, é necessário configurar sua própria chave da API no código.
 
@@ -34,7 +34,7 @@ Para utilizar o chatbot, é necessário configurar sua própria chave da API no 
 - API Gemini (IA)
 - Git & GitHub
 
-## 📂 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```text
 corpo-fit/
@@ -58,3 +58,24 @@ corpo-fit/
 ├── img/
 │   └── (imagens dos exercícios e ilustrações)
 └── README.md             # Documentação do projeto
+
+## Como Executar o Projeto
+
+1. Clone o repositório:
+   git clone https://github.com/seu-usuario/nome-do-repo.git
+
+2. Abra o arquivo `index.html` no navegador.
+
+3. Para utilizar o chatbot, configure sua própria chave da API Gemini.
+
+## Melhorias Futuras
+
+- Implementar backend e autenticação real
+- Criar versão mobile responsiva
+- Melhorar validações de formulário
+- Separar melhor a lógica JavaScript
+
+## Autor
+
+Vinicius Marçal  
+Estudante de Análise e Desenvolvimento de Sistemas
